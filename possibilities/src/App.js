@@ -6,6 +6,8 @@ import './App.css';
 import styled from 'styled-components'
 
 let Container = styled.div`
+  margin: 0 5px;
+  
 
 `
 
