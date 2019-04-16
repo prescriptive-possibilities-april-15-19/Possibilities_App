@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//styled components import 
+import styled from 'styled-components'
+
+let Container = styled.div`
+
+`
+
+
 class App extends Component {
   render() {
     return (
