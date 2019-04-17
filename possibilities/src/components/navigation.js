@@ -12,6 +12,8 @@ let NavBar = styled.div`
   border-bottom: 1px solid #00A9A5;
   background-color: #092327;
   color: #B1EDE8;
+  justify-content: space-between;
+  font-family: 'Segoe UI';
 `
 
 //this will be just the linked items that will be displayed using a dropdown for each group
