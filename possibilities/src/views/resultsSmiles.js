@@ -21,6 +21,7 @@ class ResultsSmiles extends React.Component {
   render() {
     return(
       <div>
+        
 
       </div>
 

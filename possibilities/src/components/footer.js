@@ -5,13 +5,13 @@ import styled from 'styled-components'
 
 let Container = styled.footer`
   text-align: center;
-  font-size: 2rem;
-  color: white;
-  border: 1px solid #B1EDE8;
-  background-color: #B1EDE8;
+  font-size: 1rem;
+  color: #0B5351;
+  border: 1px solid #092327;
+  background-color: #092327;
 `
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <Container>
       <p>
@@ -20,3 +20,5 @@ export const Footer = () => {
     </Container>
   )
 }
+
+export default Footer
