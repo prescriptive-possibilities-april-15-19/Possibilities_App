@@ -1,1 +1,0 @@
-//display an individual protein item
