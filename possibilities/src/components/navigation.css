@@ -1,0 +1,33 @@
+.items {
+  margin: 0 10px;
+  text-overflow: none;
+}
+
+.dropdown { 
+  position:relative;
+	float:left;
+	margin:0;
+	padding:0
+}
+
+.dropdown-items {
+  display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+.dropdown-items li {
+  float:none;
+	width:200px
+}
+
+.dropdown:hover {
+  background:#f6f6f6
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+}
