@@ -9,7 +9,7 @@ let Container = styled.footer`
   color: #0B5351;
   border: 1px solid #092327;
   background-color: #092327;
-  font-family: 'Segoe UI'
+  font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 `
 
 const Footer = () => {
