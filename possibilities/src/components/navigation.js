@@ -4,9 +4,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 
-//import connecter for react-redux
-import { connect } from 'react-redux'
-
 //this will be a combination of the navigation items and the logo/title that will be used
 let NavBar = styled.div`
   display: flex;
@@ -33,7 +30,7 @@ let DropDownItem = styled.a`
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
-  
+
 `
 
 let Navigation = () => {
@@ -65,3 +62,5 @@ let Navigation = () => {
   )
   
 }
+
+export default Navigation

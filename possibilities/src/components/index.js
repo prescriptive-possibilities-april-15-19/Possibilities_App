@@ -1,4 +1,4 @@
-// export { default as Navigation } from './navigation'
+export { default as Navigation } from './navigation'
 export { default as ProteinSearch } from './proteinSearch'
 export { default as SmilesSearch } from './smilesSearch'
 export { default as DataDisplay } from './dataDisplay'

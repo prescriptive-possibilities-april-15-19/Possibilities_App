@@ -67,7 +67,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-
+          <Navigation />
           <img src={logo} className="App-logo" alt="logo" />
          </header>
           <AreaChart width={730} height={250} data={data}
