@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//import routers and router components
+import { BrowserRouter as Router, withRouter } from 'react-router-dom'
+
 //import reducer
 // import rootReducer from './reducers'
 
@@ -22,9 +25,13 @@ const store = createStore(
 
 const rootElement = document.getElementById('root')
 
+const AppWithRouter = withRouter(App)
+
 ReactDOM.render(
   <Provider store={store}>
-    <App /> 
+    <Router>
+      <AppWithRouter /> 
+    </Router>
   </Provider>, 
 rootElement);
 

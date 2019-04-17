@@ -10,6 +10,7 @@ let NavBar = styled.div`
   padding: 10px;
   border-bottom: 1px solid #00A9A5;
   background-color: #092327;
+  color: #B1EDE8;
 `
 
 //this will be just the linked items that will be displayed using a dropdown for each group
@@ -35,10 +36,10 @@ let DropDownItem = styled.a`
 
 let Navigation = () => {
   return(
-    <div>
-      <h1></h1>
-      <nav>
-        <a>home</a>
+    <NavBar>
+      <h1>Perspective Possibilities Application</h1>
+      <NavItems>
+        <NavLink to=''>home</NavLink>
         <div>
           <h2>search</h2>
           <ul>
@@ -53,12 +54,12 @@ let Navigation = () => {
             <li>s.m.i.l.e.s.</li>
           </ul> 
         </div>
-        <a>more information(marketing page link)</a>
-        <a>contact us(ui side link if they make this page during stretch)</a> 
+        <NavLink to=''>more information(marketing page link)</NavLink>
+        <NavLink to=''>contact us(ui side link if they make this page during stretch)</NavLink> 
 
-      </nav>
+      </NavItems>
 
-    </div>
+    </NavBar>
   )
   
 }

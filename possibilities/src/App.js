@@ -8,6 +8,10 @@ import styled from 'styled-components'
 //import components
 import { Navigation, ProteinSearch, SmilesSearch, DataDisplay, Footer } from './components/index'
 
+//import routes and react-router components
+import { Route } from 'react-router-dom'
+
+//import rechart items
 import { AreaChart, XAxis, YAxis, ReferenceLine, CartesianGrid, Area, Tooltip } from 'recharts'
 
 let Container = styled.div`
