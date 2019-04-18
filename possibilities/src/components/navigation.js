@@ -47,20 +47,20 @@ let Navigation = () => {
         <div className='items'>
           <ul className='dropdown'>search
             <ul className='dropdown-items'>
-              <li><NavLink to='' className='nav'>proteins</NavLink></li>
-              <li><NavLink to='' className='nav'>s.m.i.l.e.s.</NavLink></li>
+              <li><NavLink to='/proteinsearch' className='nav'>proteins</NavLink></li>
+              <li><NavLink to='/smilesearch' className='nav'>s.m.i.l.e.s.</NavLink></li>
             </ul>
           </ul>
         </div>
         <div className='items'>
           <ul className='dropdown'>common searches
             <ul className='dropdown-items'>
-              <li><NavLink to='' className='nav'>proteins</NavLink></li>
-              <li><NavLink to='' className='nav'>s.m.i.l.e.s.</NavLink></li>
+              <li><NavLink to='/proteincommon' className='nav'>proteins</NavLink></li>
+              <li><NavLink to='/smilecommon' className='nav'>s.m.i.l.e.s.</NavLink></li>
             </ul> 
           </ul>
         </div>
-        <NavLink to='' className='items'>Compare</NavLink>
+        <NavLink to='/compare' className='items'>Compare</NavLink>
         <a href='https://prescriptiveposshp.netlify.com/aboutteam.html' className='items'>About Us</a>
         <a href='https://prescriptivepossibilities.netlify.com/' className='items'>More Info</a> 
       </NavItems>

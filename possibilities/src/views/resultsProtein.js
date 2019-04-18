@@ -9,6 +9,9 @@ import styled from 'styled-components'
 //import components that will be used
 import { ProteinList, ProteinSearch } from '../components'
 
+//import actions
+import { grabProtein, grabSmiles } from '../actions'
+
 //display all of the results for the search
 class ResultsProtein extends React.Component {
   constructor() {
@@ -31,3 +34,10 @@ class ResultsProtein extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  proteinData: state.proteinData,
+  smileData: state.smileData
+})
+
+export default connect( mapStateToProps, { grabProtein, grabSmiles } )(ResultsProtein);

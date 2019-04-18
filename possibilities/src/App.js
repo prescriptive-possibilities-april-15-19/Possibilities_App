@@ -81,7 +81,7 @@ class App extends Component {
         <Navigation />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Route path='/' component={HomePage}/>
+          <Route exact path='/' component={HomePage}/>          
         </header>
          
           {/* <AreaChart width={730} height={250} data={data}
