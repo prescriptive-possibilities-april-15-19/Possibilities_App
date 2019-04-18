@@ -1,15 +1,13 @@
 
-// Create NGL Stage object
-var stage = new NGL.Stage( "viewport" );
+// // Create NGL Stage object
+// var stage = new NGL.Stage( "viewport" );
 
-// Handle window resizing
-window.addEventListener( "resize", function( event ){
-    stage.handleResize();
-}, false );
+// // Handle window resizing
 
 
-// Load PDB entry 1CRN
-stage.loadFile( "rcsb://1crn", { defaultRepresentation: true } );
+
+// // Load PDB entry 1CRN
+// stage.loadFile( "rcsb://1crn", { defaultRepresentation: true } );
 
 
 import React, { Component } from 'react';
@@ -18,23 +16,22 @@ import { Stage } from 'ngl';
 class MoleculeViewer extends Component {  
   constructor(props) {
     super(props);
-    this.state = {stage: null}
+    this.state = {
+      stage: new Stage("viewport")
+    }
   }
 
   componentDidMount() {
-    this.setState({state: new Stage("viewport")});
-    setTimeout( () => this.state.stage.loadFile(this.props.url, {ext: this.props.ext, defaultRepresentation: true}) );
-  }
-
-  componentWillUnount() {
-    this.state.stage.dispose();
+    this.state.stage.loadFile( "rcsb://1crn", { defaultRepresentation: true });
+    window.addEventListener( "resize", function( event ){
+      this.state.stage.handleResize();
+    }, false );
   }
   
   render() {
     return (
       <div id="viewport" style={{width: "100%"}}>
-        <img src={this.props.loadingImg} id="loading-img" className="Loading-Img" alt="loading" style = {{margin: "auto", display: this.state.url ? "none" : "block" }} />
-      </div>
+     </div>
     );
   }
 }

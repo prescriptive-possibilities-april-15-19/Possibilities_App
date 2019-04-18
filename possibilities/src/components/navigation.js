@@ -41,7 +41,7 @@ let NavItems = styled.nav`
 let Navigation = () => {
   return(
     <NavBar>
-      <h1>Perspective Possibilities Application</h1>
+      <h1>Prescriptive Possibilities Application</h1>
       <NavItems>
         <NavLink to='/' className='items'>Home</NavLink>
         <div className='items'>
@@ -62,7 +62,7 @@ let Navigation = () => {
         </div>
         <NavLink to='' className='items'>Compare</NavLink>
         <a href='https://prescriptiveposshp.netlify.com/aboutteam.html' className='items'>About Us</a>
-        <a href='https://perscriptivepossibilities.netlify.com/' className='items'>More Info</a> 
+        <a href='https://prescriptivepossibilities.netlify.com/' className='items'>More Info</a> 
       </NavItems>
 
     </NavBar>

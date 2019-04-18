@@ -10,6 +10,11 @@ import { Navigation, Footer } from './components/index'
 
 //import views
 import HomePage from './views/home' 
+import Compare from './views/compare'
+import ProteinDisplay from './views/proteinDisplay'
+import ProteinResults from './views/resultsProtein'
+import SmilesDisplay from './views/smilesDisplay'
+import SmilesResults from './views/resultsSmiles'
 
 //import routes and react-router components
 import { Route } from 'react-router-dom'
@@ -76,8 +81,8 @@ class App extends Component {
         <Navigation />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <HomePage />
-         </header>
+          <Route path='/' component={HomePage}/>
+        </header>
          
           {/* <AreaChart width={730} height={250} data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -98,7 +103,13 @@ class App extends Component {
             <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
             <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
           </AreaChart> */}
-          
+        <div>
+          <Route path='/compare' component={Compare}/>
+          <Route path='/proteinsearch' component={ProteinResults}/>
+          <Route path='/proteincommon' component={ProteinDisplay}/>
+          <Route path='/smilesearch' component={SmilesResults}/>
+          <Route path='/smilecommon' component={SmilesDisplay}/>
+        </div>
         <Footer />
       </div>
     );
