@@ -44,7 +44,7 @@ class ResultsProtein extends React.Component {
     return(      
       <div>
         <ProteinSearch search={this.state.search} handleChange={this.handleChange} searchProtein={this.searchProtein}/>
-        {!this.props.proteinData 
+        {this.props.proteinData.length < 1
         ? 
           <p>Waiting for a proper search</p>
         :
@@ -57,7 +57,7 @@ class ResultsProtein extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  proteinData: state.proteinData
+  proteinData: state.dataReducer.proteinData
 })
 
 export default connect( mapStateToProps, { grabProtein } )(ResultsProtein);

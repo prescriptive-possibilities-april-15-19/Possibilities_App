@@ -57,7 +57,7 @@ class ResultsSmiles extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  smileData: state.smileData
+  smileData: state.dataReducer.smileData
 })
 
 export default connect( mapStateToProps, { grabSmiles } )(ResultsSmiles);
