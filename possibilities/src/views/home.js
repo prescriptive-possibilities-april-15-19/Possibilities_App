@@ -7,6 +7,9 @@ import { connect } from 'react-redux'
 //import styled components 
 import styled from 'styled-components'
 
+//import actions
+import { grabProtein, grabSmiles } from '../actions'
+
 
 class HomePage extends React.Component {
   constructor() {
@@ -23,8 +26,15 @@ class HomePage extends React.Component {
   render() {
     return( 
       <div>
-        
+        <div id="viewport"></div>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  proteinData: state.proteinData,
+  smileData: state.smileData
+})
+
+export default connect( mapStateToProps, { grabProtein, grabSmiles } )(HomePage);

@@ -1,25 +1,39 @@
-import { DATA_FETCH, DATA_SUCCESS, DATA_FAIL } from '../actions'
+import { PROTEIN_DATA_FETCH, PROTEIN_DATA_SUCCESS, PROTEIN_DATA_FAIL, SMILES_DATA_FETCH, SMILES_DATA_SUCCESS, SMILES_DATA_FAIL } from '../actions'
 
 const initialState = {
-  data: [],
+  smileData: [],
+  proteinData: [],
   fetching: false,
   error: ''
 };
 
 export const dataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case DATA_FETCH: 
+    case SMILES_DATA_FETCH: 
       return {
         ...state,
         fetching: true, 
         error: ''   
       }
-    case DATA_SUCCESS:
+    case SMILES_DATA_SUCCESS:
       return {
         ...state,
         fetching: false,
         error: '',
-        characters: action.payload
+        smileData: action.payload
+      }
+    case PROTEIN_DATA_FETCH: 
+      return {
+        ...state,
+        fetching: true, 
+        error: ''   
+      }
+    case PROTEIN_DATA_SUCCESS:
+      return {
+        ...state,
+        fetching: false,
+        error: '',
+        proteinData: action.payload
       }
     case DATA_FAIL:
     default:
