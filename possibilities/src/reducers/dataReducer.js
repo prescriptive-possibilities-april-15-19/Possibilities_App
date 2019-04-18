@@ -29,13 +29,14 @@ export const dataReducer = (state = initialState, action) => {
         error: ''   
       }
     case PROTEIN_DATA_SUCCESS:
+    console.log('state', state)
       return {
         ...state,
         fetching: false,
         error: '',
         proteinData: action.payload
       }
-    case DATA_FAIL:
+    case SMILES_DATA_FAIL:
     default:
       return state;
   }

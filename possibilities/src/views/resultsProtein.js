@@ -10,14 +10,14 @@ import styled from 'styled-components'
 import { ProteinList, ProteinSearch } from '../components'
 
 //import actions
-import { grabProtein, grabSmiles } from '../actions'
+import { grabProtein } from '../actions'
 
 //display all of the results for the search
 class ResultsProtein extends React.Component {
   constructor() {
     super()
     this.state = {
-
+      search: ''
     }
   }
 
@@ -25,10 +25,31 @@ class ResultsProtein extends React.Component {
     
   }
 
-  render() {
-    return(
-      <div>
+  searchProtein = event => {
+    event.preventDefault()
+    this.props.grabProtein(this.state.search)
+    console.log(' result', this.props.proteinData)
+    this.setState({
+      search: ''
+    })
+  }
 
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })  
+  }
+
+  render() {console.log(this.props.proteinData)
+    return(      
+      <div>
+        <ProteinSearch search={this.state.search} handleChange={this.handleChange} searchProtein={this.searchProtein}/>
+        {!this.props.proteinData 
+        ? 
+          <p>Waiting for a proper search</p>
+        :
+          <ProteinList protein={this.props.proteinData}/>
+        }
       </div>
 
     )
@@ -36,8 +57,7 @@ class ResultsProtein extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  proteinData: state.proteinData,
-  smileData: state.smileData
+  proteinData: state.proteinData
 })
 
-export default connect( mapStateToProps, { grabProtein, grabSmiles } )(ResultsProtein);
+export default connect( mapStateToProps, { grabProtein } )(ResultsProtein);

@@ -2,7 +2,7 @@
 export { default as Navigation } from './navigation'
 export { default as ProteinSearch } from './proteinSearch'
 export { default as SmilesSearch } from './smilesSearch'
-export { default as ProteinsList } from './proteinsList'
+export { default as ProteinList } from './proteinsList'
 export { default as SmilesList } from './smilesList'
 export { default as Protein } from './protein'
 export { default as Smile } from './smile'

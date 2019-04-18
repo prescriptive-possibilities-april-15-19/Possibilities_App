@@ -7,12 +7,12 @@ export let PROTEIN_DATA_FETCH = 'PROTEIN_DATA_FETCH'
 export let PROTEIN_DATA_SUCCESS = 'PROTEIN_DATA_SUCCESS'
 export let PROTEIN_DATA_FAIL = 'PROTEIN_DATA_FAIL'
 
-export const grabProtein = () => dispatch => {
+export const grabProtein = (someQueryString) => dispatch => {
   dispatch({ type: PROTEIN_DATA_FETCH })
-
-  axios.get('')
-  .then( res => {
-    dispatch({ type: PROTEIN_DATA_SUCCESS, payload: res.data })
+ 
+  axios.get('https://prescriptive-backend.herokuapp.com/sequences', { headers: { 'sequence': someQueryString } })
+  .then( res => { console.log(res.data.data)
+    dispatch({ type: PROTEIN_DATA_SUCCESS, payload: res.data.data })
   })
   .catch( err => {
     dispatch({ type: PROTEIN_DATA_FAIL, payload: err})
@@ -25,10 +25,10 @@ export let SMILES_DATA_FETCH = 'SMILES_DATA_FETCH'
 export let SMILES_DATA_SUCCESS = 'SMILES_DATA_SUCCESS'
 export let SMILES_DATA_FAIL = 'SMILES_DATA_FAIL'
 
-export const grabSmiles = () => dispatch => {
+export const grabSmiles = (someQueryString) => dispatch => {
   dispatch({ type: SMILES_DATA_FETCH })
 
-  axios.get('')
+  axios.get('axios.get(https://prescriptive-backend.herokuapp.com/ligands', { headers: { 'smiles': someQueryString } })
   .then( res => {
     dispatch({ type: SMILES_DATA_SUCCESS, payload: res.data })
   })

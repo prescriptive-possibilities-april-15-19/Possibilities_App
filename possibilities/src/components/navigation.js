@@ -45,7 +45,7 @@ let Navigation = () => {
       <NavItems>
         <NavLink to='/' className='items'>Home</NavLink>
         <div className='items'>
-          <ul className='dropdown'>search
+          <ul className='dropdown'>Search
             <ul className='dropdown-items'>
               <li><NavLink to='/proteinsearch' className='nav'>proteins</NavLink></li>
               <li><NavLink to='/smilesearch' className='nav'>s.m.i.l.e.s.</NavLink></li>
@@ -53,7 +53,7 @@ let Navigation = () => {
           </ul>
         </div>
         <div className='items'>
-          <ul className='dropdown'>common searches
+          <ul className='dropdown'>Common Searches
             <ul className='dropdown-items'>
               <li><NavLink to='/proteincommon' className='nav'>proteins</NavLink></li>
               <li><NavLink to='/smilecommon' className='nav'>s.m.i.l.e.s.</NavLink></li>
