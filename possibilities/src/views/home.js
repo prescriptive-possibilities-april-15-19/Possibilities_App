@@ -1,3 +1,4 @@
+//dashboard for the application when you first open it, possibly put some data about the app and maybe number 1 searched item or an image of two compounds combined
 import React from 'react'
 
 //import connecter for react-redux

@@ -45,24 +45,24 @@ let Navigation = () => {
       <NavItems>
         <NavLink to='' className='items'>Home</NavLink>
         <div className='items'>
-          <h2 className='dropdown'>search
+          <ul className='dropdown'>search
             <ul className='dropdown-items'>
               <li>proteins</li>
               <li>s.m.i.l.e.s.</li>
             </ul>
-          </h2>
+          </ul>
         </div>
         <div className='items'>
-          <h2 className='dropdown'>common searches
+          <ul className='dropdown'>common searches
             <ul className='dropdown-items'>
               <li>proteins</li>
               <li>s.m.i.l.e.s.</li>
             </ul> 
-          </h2>
+          </ul>
         </div>
+        <NavLink to='' className='items'>Compare</NavLink>
         <NavLink to='' className='items'>About Us</NavLink>
         <NavLink to='' className='items'>Contact Us</NavLink> 
-
       </NavItems>
 
     </NavBar>
