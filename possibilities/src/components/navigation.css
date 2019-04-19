@@ -33,6 +33,10 @@
   list-style: none;
 }
 
+.dropdown-items li .nav {
+  text-decoration: none;
+}
+
 .items:hover {
   background: #B1EDE8;
   color: #092327;

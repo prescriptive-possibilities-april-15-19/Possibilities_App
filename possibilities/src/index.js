@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom'
 
 //import reducer
-// import rootReducer from './reducers'
+import combineReducers from './reducers'
 
 //provider import, along with store and middleware
 import { Provider } from 'react-redux'
@@ -19,7 +19,7 @@ import logger from 'redux-logger'
 
 //apply middleware inside of the store as well as the reducer
 const store = createStore(
-  // rootReducer,
+  combineReducers,
   applyMiddleware( thunk, logger )
 )
 

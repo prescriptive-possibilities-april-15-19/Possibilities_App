@@ -16,8 +16,8 @@ const ProteinList = props => {
   console.log(props)
   return (
     <ul>
-      {props.proteins.map(protein => {
-        return <Protein key={protein.id} protein={protein} />;
+      {props.protein.map(protein => {
+        return <Protein key={protein.seq_id} protein={protein} />;
       })}
     </ul>
   );

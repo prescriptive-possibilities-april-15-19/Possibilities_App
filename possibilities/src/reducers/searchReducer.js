@@ -7,7 +7,7 @@ const initialState = {
   error: ''
 };
 
-export const storeReducer = (state = initialState, action) => {
+export const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case PROTEIN_START: 
       return {
@@ -35,7 +35,7 @@ export const storeReducer = (state = initialState, action) => {
         error: '',
         characters: action.payload
       }
-    case TRANSFER_FAIL:
+    case SMILES_FAIL:
     default:
       return state;
   }

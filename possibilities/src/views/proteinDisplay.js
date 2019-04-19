@@ -1,4 +1,4 @@
-//the retrieved data formatted 
+//the retrieved data formatted for the top searched proteins
 import React from 'react'
 
 //import the proteins list component to be displayed along with the search bar in case another search is wanted
@@ -11,3 +11,5 @@ let ProteinsDisplay = props => {
     </div>
   )
 }
+
+export default ProteinsDisplay

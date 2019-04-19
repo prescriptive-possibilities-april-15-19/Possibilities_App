@@ -41,28 +41,28 @@ let NavItems = styled.nav`
 let Navigation = () => {
   return(
     <NavBar>
-      <h1>Perspective Possibilities Application</h1>
+      <h1>Prescriptive Possibilities Application</h1>
       <NavItems>
-        <NavLink to='' className='items'>Home</NavLink>
+        <NavLink to='/' className='items'>Home</NavLink>
         <div className='items'>
-          <ul className='dropdown'>search
+          <ul className='dropdown'>Search
             <ul className='dropdown-items'>
-              <li>proteins</li>
-              <li>s.m.i.l.e.s.</li>
+              <li><NavLink to='/proteinsearch' className='nav'>proteins</NavLink></li>
+              <li><NavLink to='/smilesearch' className='nav'>s.m.i.l.e.s.</NavLink></li>
             </ul>
           </ul>
         </div>
         <div className='items'>
-          <ul className='dropdown'>common searches
+          <ul className='dropdown'>Common Searches
             <ul className='dropdown-items'>
-              <li>proteins</li>
-              <li>s.m.i.l.e.s.</li>
+              <li><NavLink to='/proteincommon' className='nav'>proteins</NavLink></li>
+              <li><NavLink to='/smilecommon' className='nav'>s.m.i.l.e.s.</NavLink></li>
             </ul> 
           </ul>
         </div>
-        <NavLink to='' className='items'>Compare</NavLink>
-        <NavLink to='' className='items'>About Us</NavLink>
-        <NavLink to='' className='items'>Contact Us</NavLink> 
+        <NavLink to='/compare' className='items'>Compare</NavLink>
+        <a href='https://prescriptiveposshp.netlify.com/aboutteam.html' className='items'>About Us</a>
+        <a href='https://prescriptivepossibilities.netlify.com/' className='items'>More Info</a> 
       </NavItems>
 
     </NavBar>
