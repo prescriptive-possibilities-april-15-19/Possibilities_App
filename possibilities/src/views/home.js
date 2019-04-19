@@ -30,7 +30,7 @@ class HomePage extends React.Component {
     return( 
       <div>
         <MoleculeViewer url="https://files.rcsb.org/view/3LPT.pdb" ext="pdb" loadImg="https://www.reddit.com/r/loadingicon/comments/7cwyib/beaker_loading_icon/" />
-        <p>Welcome to a world of possibilites that will help shape the way you look at the medical field and it's applications to your daily life.</p>
+        <p>Welcome to a world of possibilities, that will help shape the way you look at the medical field and it's applications to your daily life.</p>
         <p>Welcome to Prescriptive Possibilities</p>
         
       </div>

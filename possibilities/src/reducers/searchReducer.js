@@ -1,8 +1,8 @@
 import { PROTEIN_START, PROTEIN_SUCCESS, PROTEIN_FAIL, SMILES_START, SMILES_SUCCESS, SMILES_FAIL } from '../actions'
 
 const initialState = {
-  proteinData: [],
-  smilesData: [],
+  proteinDataC: [],
+  smilesDataC: [],
   searching: false,
   error: ''
 };
@@ -20,7 +20,7 @@ export const searchReducer = (state = initialState, action) => {
         ...state,
         searching: false,
         error: '',
-        characters: action.payload
+        proteinDataC: action.payload
       }
     case SMILES_START: 
       return {
@@ -33,7 +33,7 @@ export const searchReducer = (state = initialState, action) => {
         ...state,
         searching: false,
         error: '',
-        characters: action.payload
+        smilesDataC: action.payload
       }
     case SMILES_FAIL:
     default:

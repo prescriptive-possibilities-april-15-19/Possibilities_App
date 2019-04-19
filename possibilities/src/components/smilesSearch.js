@@ -1,6 +1,11 @@
 //the form for the search bar for the S.M.I.L.E.S.
 import React from 'react'
 
+import styled from 'styled-components'
+
+let Container = styled.div`
+  
+`
 
 let SmilesSearch = props => {
   return(

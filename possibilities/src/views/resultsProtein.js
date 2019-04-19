@@ -12,6 +12,12 @@ import { ProteinList, ProteinSearch } from '../components'
 //import actions
 import { grabProtein } from '../actions'
 
+
+let Container = styled.div`
+  min-height: 100vh;
+  
+`
+
 //display all of the results for the search
 class ResultsProtein extends React.Component {
   constructor() {
@@ -19,10 +25,6 @@ class ResultsProtein extends React.Component {
     this.state = {
       search: ''
     }
-  }
-
-  componentDidMount() {
-    
   }
 
   searchProtein = event => {
@@ -42,7 +44,7 @@ class ResultsProtein extends React.Component {
 
   render() {console.log(this.props.proteinData)
     return(      
-      <div>
+      <Container>
         <ProteinSearch search={this.state.search} handleChange={this.handleChange} searchProtein={this.searchProtein}/>
         {this.props.proteinData.length < 1
         ? 
@@ -50,7 +52,7 @@ class ResultsProtein extends React.Component {
         :
           <ProteinList protein={this.props.proteinData}/>
         }
-      </div>
+      </Container>
 
     )
   }
