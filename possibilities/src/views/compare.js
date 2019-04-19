@@ -1,11 +1,27 @@
 import React from 'react'
 
-let Compare = props => {
-  return(
-    <div>
+import { connect } from 'react-redux'
 
-    </div>
-  )
+class Compare extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+
+    }
+  }
+
+  render(){
+    return(
+      <div>
+
+      </div>
+    )
+  }
 }
 
-export default Compare
+const mapStateToProps = state => ({
+  proteinData: state.dataReducer.proteinData,
+  smileData: state.dataReducer.smileData
+})
+
+export default connect( mapStateToProps, { } )(Compare);

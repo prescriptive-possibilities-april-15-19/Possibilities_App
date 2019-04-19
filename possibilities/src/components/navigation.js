@@ -62,7 +62,7 @@ let Navigation = () => {
         </div>
         <NavLink to='/compare' className='items'>Compare</NavLink>
         <a href='https://prescriptiveposshp.netlify.com/aboutteam.html' className='items'>About Us</a>
-        <a href='https://prescriptivepossibilities.netlify.com/' className='items'>More Info</a> 
+        <a href='https://prescriptiveposshp.netlify.com/index.html' className='items'>More Info</a> 
       </NavItems>
 
     </NavBar>

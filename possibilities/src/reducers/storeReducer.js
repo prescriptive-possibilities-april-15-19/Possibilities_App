@@ -19,7 +19,7 @@ export const storeReducer = (state = initialState, action) => {
         ...state,
         saving: false,
         error: '',
-        characters: action.payload
+        storedData: action.payload
       }
     case TRANSFER_FAIL:
     default:

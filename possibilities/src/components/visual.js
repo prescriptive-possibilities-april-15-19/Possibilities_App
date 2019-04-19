@@ -13,7 +13,7 @@ class MoleculeViewer extends Component {
   }
 
   componentDidMount() {
-    var stage = new Stage( "viewport", {backgroundColor: "white"} );
+    var stage = new Stage( "viewport", {backgroundColor: "#B1EDE8"} );
       stage.spinAnimation.axis = {x: 0, y: 0.5, z: 1.0};
       // stage.mouseControls.disabled = true;
       stage.mouseControls.clear();

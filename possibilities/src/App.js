@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 //styled components import 
@@ -20,32 +20,37 @@ import SmilesResults from './views/resultsSmiles'
 import { Route } from 'react-router-dom'
 
 //import rechart items
-import { AreaChart, XAxis, YAxis, ReferenceLine, CartesianGrid, Area, Tooltip } from 'recharts'
+// import { AreaChart, XAxis, YAxis, ReferenceLine, CartesianGrid, Area, Tooltip } from 'recharts'
 
 let Container = styled.div`
-  margin: 0 5px;
-  
+  background-color: #0B5351;
+  text-align: center;
+  color: white;
+`
 
+let PageWrap = styled.div`
+  margin: 0 5px;
 `
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container>
         <Navigation />
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Route exact path='/' component={HomePage}/>          
-        </header>
-        <div>
+                   
+        </header> */}
+        <PageWrap>
+          <Route exact path='/' component={HomePage}/>
           <Route path='/compare' component={Compare}/>
           <Route path='/proteinsearch' component={ProteinResults}/>
           <Route path='/proteincommon' component={ProteinDisplay}/>
           <Route path='/smilesearch' component={SmilesResults}/>
           <Route path='/smilecommon' component={SmilesDisplay}/>
-        </div>
+        </PageWrap>
         <Footer />
-      </div>
+      </Container>
     );
   }
 }
