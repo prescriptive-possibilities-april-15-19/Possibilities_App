@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 
 //import actions
-import { grabProtein, grabSmiles } from '../actions'
+// import { } from '../actions'
 
 //import component 
 import { MoleculeViewer } from '../components'
@@ -29,17 +29,18 @@ class HomePage extends React.Component {
   render() {
     return( 
       <div>
-        {/* <MoleculeViewer /> */}
+        <MoleculeViewer url="https://files.rcsb.org/view/3LPT.pdb" ext="pdb" loadImg="https://www.reddit.com/r/loadingicon/comments/7cwyib/beaker_loading_icon/" />
         <p>Welcome to a world of possibilites that will help shape the way you look at the medical field and it's applications to your daily life.</p>
         <p>Welcome to Prescriptive Possibilities</p>
+        
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  proteinData: state.proteinData,
-  smileData: state.smileData
+  proteinData: state.dataReducer.proteinData,
+  smileData: state.dataReducer.smileData
 })
 
-export default connect( mapStateToProps, { grabProtein, grabSmiles } )(HomePage);
+export default connect( mapStateToProps, { } )(HomePage);
