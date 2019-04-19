@@ -10,13 +10,15 @@ import { Link } from 'react-router-dom'
 //import styled components
 import styled from 'styled-components'
 
+let Cards = styled.ul`
 
+`
 
 const SmileList = props => {
   console.log(props)
   return (
     <ul>
-      {props.smiles.map(smile => {
+      {props.smile.map(smile => {
         return <Smile key={smile.id} smile={smile} />;
       })}
     </ul>

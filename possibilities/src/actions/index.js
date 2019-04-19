@@ -28,9 +28,9 @@ export let SMILES_DATA_FAIL = 'SMILES_DATA_FAIL'
 export const grabSmiles = (someQueryString) => dispatch => {
   dispatch({ type: SMILES_DATA_FETCH })
 
-  axios.get('axios.get(https://prescriptive-backend.herokuapp.com/ligands', { headers: { 'smiles': someQueryString } })
+  axios.get('https://prescriptive-backend.herokuapp.com/ligands', { headers: { 'smiles': someQueryString } })
   .then( res => {
-    dispatch({ type: SMILES_DATA_SUCCESS, payload: res.data })
+    dispatch({ type: SMILES_DATA_SUCCESS, payload: res.data.data })
   })
   .catch( err => {
     dispatch({ type: SMILES_DATA_FAIL, payload: err})
@@ -38,7 +38,7 @@ export const grabSmiles = (someQueryString) => dispatch => {
 }
 
 
-//search function to grab protein data
+//search function to grab protein data for name, image, color, etc
 //export protein type names
 export let PROTEIN_START = 'PROTEIN_START'
 export let PROTEIN_SUCCESS = 'PROTEIN_SUCCESS'
@@ -108,7 +108,7 @@ export let PROTEIN_FAIL = 'PROTEIN_FAIL'
 //       });
 // }
 
-//search function to grab smiles data
+//search function to grab smiles data for name, image, color, etc
 //export smiles type names
 export let SMILES_START = 'SMILES_START'
 export let SMILES_SUCCESS = 'SMILES_SUCCESS'

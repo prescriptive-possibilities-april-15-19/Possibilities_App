@@ -5,14 +5,14 @@ import React from 'react'
 let SmilesSearch = props => {
   return(
     <div>
-      <form onSubmit={props.searchSmile}> 
+      <form onSubmit={props.searchSmiles}> 
         <input
           onChange={props.handleChange}
           placeholder="name"
           value={props.search}
           name="search"
         />
-        <button type='submit' onClick={props.searchSmile}>Search</button>
+        <button type='submit' onClick={props.searchSmiles}>Search</button>
       </form>
     </div> 
   )

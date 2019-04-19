@@ -32,10 +32,6 @@ class MoleculeViewer extends Component {
       })
     // this.setState({stage});
   }
-
-  componentWillUnmount() {
-    this.state.stage.dispose();
-  }
   
   render() {
     return (

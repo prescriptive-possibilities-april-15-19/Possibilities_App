@@ -27,8 +27,8 @@ class ResultsSmiles extends React.Component {
 
   searchSmiles = event => {
     event.preventDefault()
-    this.props.grabProtein(this.state.search)
-    console.log(' result', this.props.proteinData)
+    this.props.grabSmiles(this.state.search)
+    console.log(' result', this.props.smileData)
     this.setState({
       search: ''
     })
@@ -43,8 +43,8 @@ class ResultsSmiles extends React.Component {
   render() {
     return(
       <div>
-        <SmilesSearch />
-        {!this.props.proteinData 
+        <SmilesSearch search={this.state.search} handleChange={this.handleChange} searchSmiles={this.searchSmiles} />
+        {!this.props.smileData 
         ? 
           <p>Waiting for a proper search</p>
         :
